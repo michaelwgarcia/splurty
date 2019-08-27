@@ -13,7 +13,12 @@ class QuotesController < ApplicationController
       flash[:error] = '<strong>Could not save</strong> the data you entered is invalid.'
     end
   end
-  
+
+  def about
+  end
+
+  private 
+
   def quote_params
     params.require(:quote).permit(:saying, :author)
   end
